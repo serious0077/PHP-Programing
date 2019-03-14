@@ -49,7 +49,7 @@
 
 
     <?php
-        $current_month = date(format 'm');
+        //$current_month = date(format 'm');
         if($current_month < 3 || $current_month > 11)
         {
             //겨울
