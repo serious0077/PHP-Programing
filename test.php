@@ -3,11 +3,12 @@
  * Created by PhpStorm.
  * User: po031
  * Date: 2019-03-12
- * Time: ì˜¤í›„ 5:15
+ * Time: ¿ÀÈÄ 5:15
  */
 
 $kor = 80;
 
 echo "Hello<br>";
 echo "{$kor}ea";
+
 ?>
