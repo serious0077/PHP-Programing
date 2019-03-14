@@ -69,6 +69,7 @@ $num2 = 2;       // 성인 매수 2매
 $total= $child * $num1 + $adult * $num2;
 
 echo "청소년 입장료 : $child 원<br>";
+echo "청소년 입장료 : {$child}원<br>"; // 5000과 원을 붙여서 출력하고자 할때
 echo "성인 입장료 : $adult 원<br>";
 echo "청소년 : $num1 매, 성인 : $num2 매<br>";
 echo "전체 입장료 : $total 원<br>";
