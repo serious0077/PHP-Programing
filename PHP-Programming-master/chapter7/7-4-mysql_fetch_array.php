@@ -17,7 +17,7 @@
 <td bgcolor="#cccccc">우편번호</td>
 <td bgcolor="#cccccc">주소</td>
 <td bgcolor="#cccccc">전화번호</td>
-<td bgcolor="#cccccc">나이</td>//
+<td bgcolor="#cccccc">나이</td>
 </tr>
 <?
    while ( $row = mysql_fetch_array($result)) 
