@@ -27,8 +27,6 @@ if(!$result){
     echo "<script> alert('에러입니다.!'); </script>";
 }
 
-<script>
-location.herf = "login_form.php";
-</script>
+
 
 ?>
