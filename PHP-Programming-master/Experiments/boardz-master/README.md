@@ -22,7 +22,6 @@
 [만약 추가한 파일이 있으면, 내용 추가! 없으면 이 문구 삭제!]
 ```
 ## board.php (수정)
-[내용 추가!!]
 
     $connect = mysql_connect("localhost","JYG","yungu");    // MySQL 데이터베이스 연결
     mysql_select_db("jyg_db", $connect);         // DB 선택
@@ -53,4 +52,3 @@
         }
     }
     echo("</ul>");
-?>
