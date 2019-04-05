@@ -46,8 +46,6 @@ Note:
     - ex) name -> char or varchar
     
 ## index.php 수정
-[여기에 index.php 를 어떻게 수정했는지, 설명을 작성하세요.]
-
 # TODO: MySQL 데이터베이스 연결 및 레코드 가져오기!
 
 $connect = mysql_connect("localhost","JYG","yungu");  // MySQL 데이터베이스 연결
@@ -78,8 +76,6 @@ while($row=mysql_fetch_array($result))  // mysql_query()의 반환값으로 데�
 
 
 ## board_form.php 수정
-[여기에 board_form.php 를 어떻게 수정했는지, 설명을 작성하세요.]
-
 if(isset($_GET[num])) {
     #TODO: MySQL 테이블에서, num에 해당하는 레코드 가져오기
     
@@ -119,8 +115,6 @@ if(isset($_GET[num])) { //update 의 경우!   기존 정보를 표시하기 위
 
 ## function
 ### insert.php 수정
-[여기에 insert.php 를 어떻게 수정했는지, 설명을 작성하세요.]
-
 # TODO: MySQL DB에서, POST로 받아온 내용 입력하기!
 
 $connect = mysql_connect("localhost","JYG","yungu");        // MySQL 데이터베이스 연결
@@ -132,8 +126,6 @@ mysql_close();      //MySQL 데이터베이스 종료
 
 
 ### update.php 수정
-[여기에 update.php 를 어떻게 수정했는지, 설명을 작성하세요.]
-
 # TODO: MySQL DB에서, num에 해당하는 레코드를 POST로 받아온 내용으로 수정하기!
 
 $connect = mysql_connect("localhost","JYG","yungu");        // MySQL 데이터베이스 연결
@@ -145,8 +137,6 @@ mysql_close();          //MySQL 데이터베이스 종료
 
 
 ### delete.php 수정
-[여기에 delete.php 를 어떻게 수정했는지, 설명을 작성하세요.]
-
 # TODO: MySQL DB에서, num에 해당하는 레코드 삭제하기!
 
 $connect = mysql_connect("localhost","JYG","yungu");        // MySQL 데이터베이스 연결
