@@ -21,13 +21,8 @@
 ├── board.php (수정)
 [만약 추가한 파일이 있으면, 내용 추가! 없으면 이 문구 삭제!]
 ```
-
 ## board.php (수정)
 [내용 추가!!]
-//form의 내용을 action은 board.php로 해주고 입력받은 값으로 title을 찾기 위해 POST형식으로 해준다.
-<form class="example" action="board.php" method="POST">
-
-
 
     $connect = mysql_connect("localhost","JYG","yungu");    // MySQL 데이터베이스 연결
     mysql_select_db("jyg_db", $connect);         // DB 선택
@@ -54,8 +49,8 @@
     
         //count가 3으로 나누어 떨어질때마다 열을 바꾸어준다.
         if($count%3 == 0){
-            echo("</ul><ul>"); 
+            echo("</ul><ul>");
         }
     }
     echo("</ul>");
-
+?>
