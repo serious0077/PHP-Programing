@@ -46,17 +46,12 @@ Note:
     - ex) name -> char or varchar
     
 ## index.php 수정
-# TODO: MySQL 데이터베이스 연결 및 레코드 가져오기!
 
 $connect = mysql_connect("localhost","JYG","yungu");  // MySQL 데이터베이스 연결
 mysql_select_db("jyg_db", $connect);  // DB 선택
 $sql="select *from tableboard_shop;";   // 테이블에 있는 모든 값을 &sql에 저장
 $result=mysql_query($sql);   //  함수의 인자에 있는 SQL 명령을 실행
 
-
-
-# TODO : 아래 표시되는 내용을, MySQL 테이블에 있는 레코드로 대체하기!
-# Note : column6 에 해당하는 Total 은 Price 값과 Quantity 값의 곱으로 표시!
 
 while($row=mysql_fetch_array($result))  // mysql_query()의 반환값으로 데이터베이스에서 레코드의 데이터를 배열 형태로 가져온다.
 {
@@ -115,7 +110,6 @@ if(isset($_GET[num])) { //update 의 경우!   기존 정보를 표시하기 위
 
 ## function
 ### insert.php 수정
-# TODO: MySQL DB에서, POST로 받아온 내용 입력하기!
 
 $connect = mysql_connect("localhost","JYG","yungu");        // MySQL 데이터베이스 연결
 mysql_select_db("jyg_db", $connect);        // DB 선택
@@ -126,7 +120,6 @@ mysql_close();      //MySQL 데이터베이스 종료
 
 
 ### update.php 수정
-# TODO: MySQL DB에서, num에 해당하는 레코드를 POST로 받아온 내용으로 수정하기!
 
 $connect = mysql_connect("localhost","JYG","yungu");        // MySQL 데이터베이스 연결
 mysql_select_db("jyg_db", $connect);        // DB 선택
@@ -137,7 +130,6 @@ mysql_close();          //MySQL 데이터베이스 종료
 
 
 ### delete.php 수정
-# TODO: MySQL DB에서, num에 해당하는 레코드 삭제하기!
 
 $connect = mysql_connect("localhost","JYG","yungu");        // MySQL 데이터베이스 연결
 mysql_select_db("jyg_db", $connect);        // DB 선택
