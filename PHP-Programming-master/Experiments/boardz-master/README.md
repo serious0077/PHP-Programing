@@ -54,7 +54,7 @@
     
         //count가 3으로 나누어 떨어질때마다 열을 바꾸어준다.
         if($count%3 == 0){
-            echo("</ul><ul>");
+            echo("</ul><ul>"); 
         }
     }
     echo("</ul>");
