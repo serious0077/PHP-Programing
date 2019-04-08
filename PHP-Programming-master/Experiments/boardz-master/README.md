@@ -23,7 +23,6 @@
 ```
 ## board.php (수정)
 
-<?php
    $connect = mysql_connect("localhost","JYG","yungu");    // MySQL 데이터베이스 연결
    mysql_select_db("jyg_db", $connect);         // DB 선택
    $sql="select image_url, title, contents from boardz where title like '%$_POST[search]%';";  
@@ -46,4 +45,4 @@
        if ($_POST[search] != NULL || $row[title] == NULL)
            echo("</ul>");
    }
-?>
+
