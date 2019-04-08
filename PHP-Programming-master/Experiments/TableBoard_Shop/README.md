@@ -71,7 +71,7 @@ while($row=mysql_fetch_array($result))  // mysql_query()의 반환값으로 데�
 
 
 ## board_form.php 수정
-if(isset($_GET[num])) {
+- if(isset($_GET[num])) {
     #TODO: MySQL 테이블에서, num에 해당하는 레코드 가져오기
     
     $connect = mysql_connect("localhost","JYG","yungu");        // MySQL 데이터베이스 연결
