@@ -23,32 +23,28 @@
 ```
 ## board.php (수정)
 
-    $connect = mysql_connect("localhost","JYG","yungu");    // MySQL 데이터베이스 연결
-    mysql_select_db("jyg_db", $connect);         // DB 선택
-    
-    //사용자가 검색한 값을 $_POST[search] boardz 테이블에서 찾는 코드
-    $sql="select image_url, title, contents from boardz where title like '%$_POST[search]%';"; 
-    
-    
-    $result=mysql_query($sql);  
-    
-    $count = 1;         // 출력 횟수
-    echo("<ul>");
-    while($row=mysql_fetch_array($result))
-    {
-        $count++;
-        echo("                   
-            <li>
-                <h1>$row[title]</h1>    // 테이블에서 가져온 title을 출력
-                $row[contents]          // 테이블에서 가져온 contents 출력
-                <img src=$row[image_url] alt=\"demo image\"/> // 테이블에서 이미지 경로를 가져와 이미지를 출력
-            </li>        
-            ");
-    
-    
-        //count가 3으로 나누어 떨어질때마다 열을 바꾸어준다.
-        if($count%3 == 0){
-            echo("</ul><ul>");
-        }
-    }
-    echo("</ul>");
+<<<<<<< HEAD
+<?php
+   $connect = mysql_connect("localhost","JYG","yungu");    // MySQL 데이터베이스 연결
+   mysql_select_db("jyg_db", $connect);         // DB 선택
+   $sql="select image_url, title, contents from boardz where title like '%$_POST[search]%';";  
+   $result=mysql_query($sql);               // search값을 테이블에서 찾아 그 레이블행을 가져온다.
+
+
+   while($row=mysql_fetch_array($result))       
+   {
+       if ($_POST[search] != NULL || $row[title] != NULL)   // 찾는값을 입력하지 않았을때와 제목이 없는 이미지일 때 열을 바꾼다.
+           echo("<ul>");
+
+       echo("                   
+           <li>
+               <h1>$row[title]</h1>               // 제목출력
+               $row[contents]                      // 코멘트 출력
+               <img src=$row[image_url] alt=\"demo image\"/>        // 이미지 출력
+           </li>        
+           ");
+
+       if ($_POST[search] != NULL || $row[title] == NULL)
+           echo("</ul>");
+   }
+?>
