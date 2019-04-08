@@ -23,7 +23,6 @@
 ```
 ## board.php (수정)
 
-<<<<<<< HEAD
 <?php
    $connect = mysql_connect("localhost","JYG","yungu");    // MySQL 데이터베이스 연결
    mysql_select_db("jyg_db", $connect);         // DB 선택
