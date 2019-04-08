@@ -53,20 +53,20 @@ Note:
     $result=mysql_query($sql);   //  함수의 인자에 있는 SQL 명령을 실행
 
 
-while($row=mysql_fetch_array($result))  // mysql_query()의 반환값으로 데이터베이스에서 레코드의 데이터를 배열 형태로 가져온다.
-{
-     $total = ($row[price] * $row[quantity]);  // total값을 구하는 식
-     echo("                      // 가져온 데이터를 $row[]형태로 레코드의 필드명을 배열 인덱스에 직접 입력하여 데이터를 출력한다.
-         <tr onclick=\"location.href = ('board_form.php?num=$row[num]')\">
-         <td class=\"column1\">$row[date]</td>
-         <td class=\"column2\">$row[order_id]</td>
-         <td class=\"column3\">$row[name]</td>
-         <td class=\"column4\">$$row[price]</td>
-         <td class=\"column5\">$row[quantity]</td>
-         <td class=\"column6\">$$total</td>
-         </tr>                    
-     ");
-}
+    while($row=mysql_fetch_array($result))  // mysql_query()의 반환값으로 데이터베이스에서 레코드의 데이터를 배열 형태로 가져온다.
+    {
+         $total = ($row[price] * $row[quantity]);  // total값을 구하는 식
+         echo("                      // 가져온 데이터를 $row[]형태로 레코드의 필드명을 배열 인덱스에 직접 입력하여 데이터를 출력한다.
+             <tr onclick=\"location.href = ('board_form.php?num=$row[num]')\">
+             <td class=\"column1\">$row[date]</td>
+             <td class=\"column2\">$row[order_id]</td>
+             <td class=\"column3\">$row[name]</td>
+             <td class=\"column4\">$$row[price]</td>
+             <td class=\"column5\">$row[quantity]</td>
+             <td class=\"column6\">$$total</td>
+             </tr>                    
+         ");
+    }
 
 
 
