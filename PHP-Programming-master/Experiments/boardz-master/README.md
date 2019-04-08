@@ -23,28 +23,28 @@
 ```
 ## board.php (수정)
 
-   $connect = mysql_connect("localhost","JYG","yungu");    // MySQL 데이터베이스 연결
-   mysql_select_db("jyg_db", $connect);         // DB 선택
-   $sql="select image_url, title, contents from boardz where title like '%$_POST[search]%';";  
-   $result=mysql_query($sql);               // search값을 테이블에서 찾아 그 레이블행을 가져온다.
+      $connect = mysql_connect("localhost","JYG","yungu");    // MySQL 데이터베이스 연결
+      mysql_select_db("jyg_db", $connect);         // DB 선택
+      $sql="select image_url, title, contents from boardz where title like '%$_POST[search]%';";  
+      $result=mysql_query($sql);               // search값을 테이블에서 찾아 그 레이블행을 가져온다.
 
 
-   
-   while($row=mysql_fetch_array($result))       
-   {
-       
-       if ($_POST[search] != NULL || $row[title] != NULL)   // 찾는값을 입력하지 않았을때와 제목이 없는 이미지일 때 열을 바꾼다.
-           echo("<ul>");
 
-       echo("                   
-           <li>
-               <h1>$row[title]</h1>               // 제목출력
-               $row[contents]                      // 코멘트 출력
-               <img src=$row[image_url] alt=\"demo image\"/>        // 이미지 출력
-           </li>        
-           ");
+     while($row=mysql_fetch_array($result))       
+     {
 
-       if ($_POST[search] != NULL || $row[title] == NULL)
-           echo("</ul>");
-   }
+         if ($_POST[search] != NULL || $row[title] != NULL)   // 찾는값을 입력하지 않았을때와 제목이 없는 이미지일 때 열을 바꾼다.
+             echo("<ul>");
+
+         echo("                   
+             <li>
+                 <h1>$row[title]</h1>               // 제목출력
+                 $row[contents]                      // 코멘트 출력
+                 <img src=$row[image_url] alt=\"demo image\"/>        // 이미지 출력
+             </li>        
+             ");
+
+         if ($_POST[search] != NULL || $row[title] == NULL)
+             echo("</ul>");
+     }
 
